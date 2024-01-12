@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
-import { Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor } from './pages';
+import { ECommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor } from './pages';
 
 const App = () => {
     const activeMenu = true;
@@ -44,7 +44,7 @@ const App = () => {
                                         bg-white
                                     '
                                 >
-                                    Sidebar
+                                    <Sidebar />
                                 </div>
                             ) : (
                                 <div
@@ -53,7 +53,7 @@ const App = () => {
                                         dark:bg-secondary-dark-bg
                                     '
                                 >
-                                    Sidebar
+                                    <Sidebar />
                                 </div>
                             )
                         }
@@ -79,36 +79,36 @@ const App = () => {
                                     w-full
                                 '
                             >
-                                Navbar
+                                <Navbar />
                             </div>
                         </div>
                         {/* Menu chính */}
                         <div>
                             <Routes>
                                 {/* Trang quản trị */}
-                                <Route path='/' element="ECommerce" />
-                                <Route path='/ecommerce' element="ECommerce" />
+                                <Route path='/' element={<ECommerce />} />
+                                <Route path='/ecommerce' element={<ECommerce />} />
 
                                 {/* Trang */}
-                                <Route path='/orders' element="Orders" />
-                                <Route path='/employees' element="Employees" />
-                                <Route path='/customers' element="Customers" />
+                                <Route path='/orders' element={<Orders />} />
+                                <Route path='/employees' element={<Employees />} />
+                                <Route path='/customers' element={<Customers />} />
 
                                 {/* Tính năng */}
-                                <Route path='/kanban' element="Kanban" />
-                                <Route path='/editor' element="Editor" />
-                                <Route path='/calendar' element="Calendar" />
-                                <Route path='/color-picker' element="ColorPicker" />
+                                <Route path='/kanban' element={<Kanban />} />
+                                <Route path='/editor' element={<Editor />} />
+                                <Route path='/calendar' element={<Calendar />} />
+                                <Route path='/color-picker' element={<ColorPicker />} />
 
                                 {/* Biểu đồ */}
-                                <Route path='/line' element="Line" />
-                                <Route path='/area' element="Area" />
-                                <Route path='/bar' element="Bar" />
-                                <Route path='/pie' element="Pie" />
-                                <Route path='/financial' element="Financial" />
-                                <Route path='/color-mapping' element="ColorMapping" />
-                                <Route path='/pyramid' element="Pyramid" />
-                                <Route path='/stacked' element="Stacked" />
+                                <Route path='/line' element={<Line />} />
+                                <Route path='/area' element={<Area />} />
+                                <Route path='/bar' element={<Bar />} />
+                                <Route path='/pie' element={<Pie />} />
+                                <Route path='/financial' element={<Financial />} />
+                                <Route path='/color-mapping' element={<ColorMapping />} />
+                                <Route path='/pyramid' element={<Pyramid />} />
+                                <Route path='/stacked' element={<Stacked />} />
                             </Routes>
                         </div>
 
@@ -119,4 +119,4 @@ const App = () => {
     )
 }
 
-export default App
+export default App;
