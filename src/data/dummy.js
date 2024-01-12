@@ -547,7 +547,7 @@ export const links = [
         icon: <BsKanban />,
       },
       {
-        name: 'Soạn thạo',
+        name: 'Soạn thảo',
         icon: <FiEdit />,
       },
       {
