@@ -17,8 +17,22 @@ export const ContextProvider = ({ children }) => {
     const [activeMenu, setActiveMenu] = useState(true);
     /**Sử dụng hook useState để tạo một trạng thái local activeMenu và một hàm setActiveMenu để cập nhật giá trị của nó. Giá trị khởi tạo là true. */
 
+    const [isClicked, setIsClicked] = useState(initialState);
+
+    //Reponsive
+    const [screenSize, setScreenSize] = useState(undefined);
+
+    const handleClick = (clicked) => {
+        /**Hàm này được sử dụng để xử lý sự kiện click. */
+        setIsClicked({ ...initialState, [clicked]: true })
+        /**Dòng này sử dụng hàm setIsClicked để cập nhật trạng thái. Nó cập nhật trạng thái dựa trên trạng thái trước đó (initialState) bằng cách sao chép 
+         * các thuộc tính của nó và ghi đè giá trị của thuộc tính có khóa bằng giá trị của tham số clicked thành true. */
+    }
+    /**Tác động tổng thể của hàm này là cập nhật trạng thái bằng cách đặt giá trị của thuộc tính đã được click là true trong khi đặt lại giá trị của tất cả 
+     * các thuộc tính khác về giá trị ban đầu của chúng. */
+
     return (
-        <StateContext.Provider value={{ activeMenu, setActiveMenu }}>
+        <StateContext.Provider value={{ activeMenu, setActiveMenu, isClicked, setIsClicked, handleClick, screenSize, setScreenSize }}>
             {/* Bao bọc tất cả các thành phần con bên trong context provider. Giá trị của activeMenu và setActiveMenu được chia sẻ thông qua context. */}
             {children}
             {/* Hiển thị tất cả các thành phần con được truyền vào ContextProvider.*/}

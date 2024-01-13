@@ -9,7 +9,17 @@ import { useStateContext } from '../contexts/ContextProvider'
 
 const Sidebar = () => {
   // Chức năng đóng mở Menu Sidebar
-  const { activeMenu, setActiveMenu } = useStateContext();
+  const { activeMenu, setActiveMenu, screenSize } = useStateContext();
+
+  //Chức năng đóng sidebar khi reponsive
+  const handleCloseSideBar = () => {
+    if (activeMenu && screenSize <= 900) {
+      /**Điều kiện kiểm tra xem giá trị của biến screenSize có nhỏ hơn hoặc bằng 900 không. */
+      setActiveMenu(false);
+      /**Nếu cả hai điều kiện ở trên đều đúng, dòng này sẽ được thực hiện. Hàm setActiveMenu được gọi để đặt giá trị của biến activeMenu thành false, có vẻ 
+       * như để đóng thanh bên. */
+    }
+  }
 
   const activeLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2';
 
@@ -32,7 +42,7 @@ const Sidebar = () => {
             <div className='flex justify-between items-center bg-white sticky top-0'>
               <Link
                 to='/'
-                onClick={() => setActiveMenu(false)}
+                onClick={handleCloseSideBar}
                 className='
                   items-center
                   gap-3
@@ -70,7 +80,7 @@ const Sidebar = () => {
                     <NavLink
                       to={`/${Link.name}`}
                       key={Link.name}
-                      onClick={() => { }}
+                      onClick={handleCloseSideBar}
                       className={({ isActive }) => isActive ? activeLink : normalLink}
                     >
                       {Link.icon}
