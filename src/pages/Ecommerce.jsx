@@ -1,13 +1,13 @@
 import React from 'react'
 import { BsCurrencyDollar } from 'react-icons/bs';
-import { GoPrimitiveDot } from 'react-icons/go';
+import { GoDotFill } from "react-icons/go";
 import { Stacked, Pie, Button, LineChart, SparkLine } from '../components';
 import { earningData, SparklineAreaData, ecomPieChartData } from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
 
 const ECommerce = () => {
     return (
-        <div className='mt-12'>
+        <div className='mt-24'>
             {/* Homepage */}
             <div className='flex flex-wrap lg:flex-nowrap justify-center'>
                 <div
@@ -29,7 +29,7 @@ const ECommerce = () => {
                 >
                     <div className='flex justify-between items-center'>
                         <div>
-                            <p className='font-semibold text-gray-400 text-xl'>Thu nhập</p>
+                            <p className='font-semibold text-gray-600 text-xl'>Thu nhập</p>
                             <p className='text-2xl'>$63,448.78</p>
                         </div>
                     </div>
@@ -51,7 +51,7 @@ const ECommerce = () => {
                                     {item.percentage}
                                 </span>
                             </p>
-                            <p className='text-sm text-gray-400 mt-1'>
+                            <p className='text-sm text-gray-600 mt-1'>
                                 {item.title}
                             </p>
                         </div>
@@ -59,8 +59,68 @@ const ECommerce = () => {
                 </div>
             </div>
 
-            <div>
+            <div className='flex gap-10 flex-wrap justify-center'>
+                <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780'>
+                    <div className='flex justify-between'>
+                        <p className='font-semibold text-xl'>Cập nhật doanh thu</p>
+                        <div className='flex items-center gap-4'>
+                            <p className='flex items-center gap-2 text-gray-600 hover:drop-shadow-xl'>
+                                <span>
+                                    <GoDotFill />
+                                </span>
+                                <span>Chi phí</span>
+                            </p>
+                            <p className='flex items-center gap-2 text-green-600 hover:drop-shadow-xl'>
+                                <span>
+                                    <GoDotFill />
+                                </span>
+                                <span>Ngân sách</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div className='mt-10 flex gap-10 flex-wrap justify-center'>
+                        <div className='border-r-1 border-color m-4 pr-10'>
+                            <div>
+                                <p>
+                                    <span className='text-3xl font-semibold'>$93,438</span>
+                                    <span className='p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-500 ml-3 text-sm'>
+                                        23%
+                                    </span>
+                                </p>
+                                <p className='text-gray-600 mt-1'>
+                                    Ngân sách
+                                </p>
+                            </div>
+                            <div className='mt-8'>
+                                <p>
+                                    <span className='text-3xl font-semibold'>$48,487</span>
+                                </p>
+                                <p className='text-gray-600 mt-1'>
+                                    Chi phí
+                                </p>
+                            </div>
 
+                            {/* Biểu đồ báo cáo */}
+                            <div className='mt-5'>
+                                <SparkLine
+                                    currentColor="blue"
+                                    id="line-sparkline"
+                                    type="Line"
+                                    height="80px"
+                                    width="250px"
+                                    data={SparklineAreaData}
+                                    color="blue"
+                                />
+                            </div>
+                            <div className='mt-10'>
+                                <Button color="white" bgColor="blue" text="Xuất báo cáo" borderRadius="10px" />
+                            </div>
+                        </div>
+                        <div>
+                            <Stacked width="380px" height="360px" />
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )
