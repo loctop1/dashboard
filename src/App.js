@@ -83,37 +83,37 @@ const App = () => {
                             >
                                 <Navbar />
                             </div>
+
+                            {/* Menu chính */}
+                            <div>
+                                <Routes>
+                                    {/* Trang quản trị */}
+                                    <Route path='/' element={<ECommerce />} />
+                                    <Route path='/Thống kê' element={<ECommerce />} />
+
+                                    {/* Trang */}
+                                    <Route path='/Đơn Hàng' element={<Orders />} />
+                                    <Route path='/Khách Hàng' element={<Employees />} />
+                                    <Route path='/Quản Trị Người Dùng' element={<Customers />} />
+
+                                    {/* Tính năng */}
+                                    <Route path='/Quản Lý Công Việc' element={<Kanban />} />
+                                    <Route path='/Soạn Thảo' element={<Editor />} />
+                                    <Route path='/Kế Hoạch' element={<Calendar />} />
+                                    <Route path='/Phối Màu' element={<ColorPicker />} />
+
+                                    {/* Biểu đồ */}
+                                    <Route path='/Tỷ Lệ' element={<Line />} />
+                                    <Route path='/Diện Tích' element={<Area />} />
+                                    <Route path='/Biểu Đồ Cột' element={<Bar />} />
+                                    <Route path='/Biểu Đồ Tròn' element={<Pie />} />
+                                    <Route path='/Dữ Liệu Tài Chính' element={<Financial />} />
+                                    <Route path='/Biểu Đồ Màu' element={<ColorMapping />} />
+                                    <Route path='/Kim Tự Tháp' element={<Pyramid />} />
+                                    <Route path='/stacked' element={<Stacked />} />
+                                </Routes>
+                            </div>
                         </div>
-                        {/* Menu chính */}
-                        <div>
-                            <Routes>
-                                {/* Trang quản trị */}
-                                <Route path='/' element={<ECommerce />} />
-                                <Route path='/ecommerce' element={<ECommerce />} />
-
-                                {/* Trang */}
-                                <Route path='/orders' element={<Orders />} />
-                                <Route path='/employees' element={<Employees />} />
-                                <Route path='/customers' element={<Customers />} />
-
-                                {/* Tính năng */}
-                                <Route path='/kanban' element={<Kanban />} />
-                                <Route path='/editor' element={<Editor />} />
-                                <Route path='/calendar' element={<Calendar />} />
-                                <Route path='/color-picker' element={<ColorPicker />} />
-
-                                {/* Biểu đồ */}
-                                <Route path='/line' element={<Line />} />
-                                <Route path='/area' element={<Area />} />
-                                <Route path='/bar' element={<Bar />} />
-                                <Route path='/pie' element={<Pie />} />
-                                <Route path='/financial' element={<Financial />} />
-                                <Route path='/color-mapping' element={<ColorMapping />} />
-                                <Route path='/pyramid' element={<Pyramid />} />
-                                <Route path='/stacked' element={<Stacked />} />
-                            </Routes>
-                        </div>
-
                     </div>
                 </BrowserRouter >
             </div >

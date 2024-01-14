@@ -54,7 +54,7 @@ const Navbar = () => {
             <img src={avatar} alt="" className='rounded-full w-8 h-8' />
             <p>
               <span className='text-black text-14'>Xin chào, </span> {''}
-              <span className='text-black font-medium ml-1 text-base'>Nguyễn Tuấn Lộc</span>
+              <span className='text-black font-medium ml-1 text-base'>Tuấn Lộc</span>
             </p>
             <MdKeyboardArrowDown className='text-black text-14' />
           </div>

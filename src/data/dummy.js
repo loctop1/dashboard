@@ -507,6 +507,13 @@ export const employeesGrid = [
   },
 ];
 
+const convertToSlug = (text) => {
+  return text.toLowerCase()
+    .replace(/\s+/g, '-')      // Thay thế dấu cách bằng dấu gạch ngang
+    .replace(/[^\p{L}\d-]+/gu, '')  // Loại bỏ các ký tự không phải chữ cái, số, hoặc dấu gạch ngang
+    .replace(/--+/g, '-');     // Loại bỏ các dấu gạch ngang liên tiếp
+}
+
 export const links = [
   {
     title: 'Trang quản trị',
@@ -514,6 +521,7 @@ export const links = [
       {
         name: 'Thống kê',
         icon: <FiShoppingBag />,
+        path: `/dashboard/${convertToSlug('Thống kê')}`,
       },
     ],
   },
@@ -524,14 +532,17 @@ export const links = [
       {
         name: 'Đơn hàng',
         icon: <AiOutlineShoppingCart />,
+        path: `/dashboard/${convertToSlug('Đơn hàng')}`,
       },
       {
         name: 'Khách hàng',
         icon: <IoMdContacts />,
+        path: `/dashboard/${convertToSlug('Khách hàng')}`,
       },
       {
         name: 'Quản trị người dùng',
         icon: <RiContactsLine />,
+        path: `/dashboard/${convertToSlug('Quản trị người dùng')}`,
       },
     ],
   },
@@ -541,18 +552,22 @@ export const links = [
       {
         name: 'Kế hoạch',
         icon: <AiOutlineCalendar />,
+        path: `/dashboard/${convertToSlug('Kế hoạch')}`,
       },
       {
         name: 'Quản lý công việc',
         icon: <BsKanban />,
+        path: `/dashboard/${convertToSlug('Quản lý công việc')}`,
       },
       {
         name: 'Soạn thảo',
         icon: <FiEdit />,
+        path: `/dashboard/${convertToSlug('Soạn thảo')}`,
       },
       {
         name: 'Phối màu',
         icon: <BiColorFill />,
+        path: `/dashboard/${convertToSlug('Phối màu')}`,
       },
     ],
   },
@@ -562,35 +577,43 @@ export const links = [
       {
         name: 'Tỷ lệ',
         icon: <AiOutlineStock />,
+        path: `/dashboard/${convertToSlug('Tỷ lệ')}`,
       },
       {
         name: 'Diện tích',
         icon: <AiOutlineAreaChart />,
+        path: `/dashboard/${convertToSlug('Diện tích')}`,
       },
 
       {
         name: 'Biểu đồ cột',
         icon: <AiOutlineBarChart />,
+        path: `/dashboard/${convertToSlug('Biểu đồ cột')}`,
       },
       {
         name: 'Biểu đồ tròn',
         icon: <FiPieChart />,
+        path: `/dashboard/${convertToSlug('Biểu đồ tròn')}`,
       },
       {
         name: 'Dữ liệu tài chính',
         icon: <RiStockLine />,
+        path: `/dashboard/${convertToSlug('Dữ liệu tài chính')}`,
       },
       {
         name: 'Biểu đồ màu',
         icon: <BsBarChart />,
+        path: `/dashboard/${convertToSlug('Biểu đồ màu')}`,
       },
       {
         name: 'Kim tự tháp',
         icon: <GiLouvrePyramid />,
+        path: `/dashboard/${convertToSlug('Kim tự tháp')}`,
       },
       {
         name: 'stacked',
         icon: <AiOutlineBarChart />,
+        path: `/dashboard/${convertToSlug('stacked')}`,
       },
     ],
   },
@@ -656,16 +679,16 @@ export const earningData = [
     icon: <MdOutlineSupervisorAccount />,
     amount: '39,354',
     percentage: '-4%',
-    title: 'Customers',
+    title: 'Khách hàng',
     iconColor: '#03C9D7',
     iconBg: '#E5FAFB',
-    pcColor: 'red-600',
+    pcColor: 'green-600',
   },
   {
     icon: <BsBoxSeam />,
     amount: '4,396',
     percentage: '+23%',
-    title: 'Products',
+    title: 'Các sản phẩm',
     iconColor: 'rgb(255, 244, 229)',
     iconBg: 'rgb(254, 201, 15)',
     pcColor: 'green-600',
@@ -674,7 +697,7 @@ export const earningData = [
     icon: <FiBarChart />,
     amount: '423,39',
     percentage: '+38%',
-    title: 'Sales',
+    title: 'Doanh thu bán hàng',
     iconColor: 'rgb(228, 106, 118)',
     iconBg: 'rgb(255, 244, 229)',
 
@@ -684,10 +707,10 @@ export const earningData = [
     icon: <HiOutlineRefresh />,
     amount: '39,354',
     percentage: '-12%',
-    title: 'Refunds',
+    title: 'Hoàn tiền',
     iconColor: 'rgb(0, 194, 146)',
     iconBg: 'rgb(235, 250, 242)',
-    pcColor: 'red-600',
+    pcColor: 'green-600',
   },
 ];
 
