@@ -93,7 +93,7 @@ const App = () => {
 
                                     {/* Trang */}
                                     <Route path='/Đơn Hàng' element={<Orders />} />
-                                    <Route path='/Khách Hàng' element={<Employees />} />
+                                    <Route path='/Nhân viên' element={<Employees />} />
                                     <Route path='/Quản Trị Người Dùng' element={<Customers />} />
 
                                     {/* Tính năng */}
