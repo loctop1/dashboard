@@ -89,42 +89,42 @@ const gridEmployeeCountry = (props) => (
 export const EditorData = () => (
   <div>
     <h3>
-      Try React
-      React has been designed from the start for gradual adoption, and you can use as little or as much React as you need. Whether you want to get a taste of React, add some interactivity to a simple HTML page, or start a complex React-powered app, the links in this section will help you get started.
+      Hãy thử React
+      React đã được thiết kế từ đầu để có thể áp dụng dần dần, và bạn có thể sử dụng ít hoặc nhiều React tùy ý. Cho dù bạn muốn trải nghiệm React, thêm tính tương tác vào một trang HTML đơn giản, hay bắt đầu một ứng dụng phức tạp được động lực bởi React, các liên kết trong phần này sẽ giúp bạn bắt đầu.
 
-      Online Playgrounds
-      If you’re interested in playing around with React, you can use an online code playground. Try a Hello World template on CodePen, CodeSandbox, or Stackblitz.
+      Sân Chơi Trực Tuyến
+      Nếu bạn quan tâm đến việc thử nghiệm React, bạn có thể sử dụng một sân chơi mã nguồn trực tuyến. Hãy thử một mẫu Hello World trên CodePen, CodeSandbox hoặc Stackblitz.
 
-      If you prefer to use your own text editor, you can also download this HTML file, edit it, and open it from the local filesystem in your browser. It does a slow runtime code transformation, so we’d only recommend using this for simple demos.
+      Nếu bạn muốn sử dụng trình chỉnh sửa văn bản riêng của mình, bạn cũng có thể tải xuống tệp HTML này, chỉnh sửa và mở nó từ hệ thống tệp cục bộ trong trình duyệt của bạn. Nó thực hiện một quá trình biến đổi mã nguồn tại thời gian chạy chậm, nên chúng tôi chỉ khuyến nghị sử dụng nó cho các bản demo đơn giản.
 
-      Add React to a Website
-      You can add React to an HTML page in one minute. You can then either gradually expand its presence, or keep it contained to a few dynamic widgets.
+      Thêm React vào Trang Web
+      Bạn có thể thêm React vào một trang HTML trong một phút. Sau đó, bạn có thể mở rộng dần sự hiện diện của nó hoặc giữ nó chỉ trong một số tiện ích động.
 
-      Create a New React App
-      When starting a React project, a simple HTML page with script tags might still be the best option. It only takes a minute to set up!
+      Tạo Một Ứng Dụng React Mới
+      Khi bắt đầu một dự án React, một trang HTML đơn giản với các thẻ kịch bản có thể vẫn là sự lựa chọn tốt nhất. Chỉ mất một phút để cài đặt!
 
-      As your application grows, you might want to consider a more integrated setup. There are several JavaScript toolchains we recommend for larger applications. Each of them can work with little to no configuration and lets you take full advantage of the rich React ecosystem. Learn how.
+      Khi ứng dụng của bạn lớn lên, bạn có thể muốn xem xét một cài đặt tích hợp hơn. Có một số bộ công cụ JavaScript chúng tôi đề xuất cho các ứng dụng lớn. Mỗi cái trong số chúng có thể làm việc với ít hoặc không cần cấu hình và cho phép bạn tận dụng đầy đủ hệ sinh thái React phong phú. Học cách.
 
-      Learn React
-      People come to React from different backgrounds and with different learning styles. Whether you prefer a more theoretical or a practical approach, we hope you’ll find this section helpful.
+      Học React
+      Mọi người đến với React từ nền tảng và phong cách học khác nhau. Cho dù bạn thích một cách tiếp cận lý thuyết hơn hay thực hành hơn, chúng tôi hy vọng bạn sẽ thấy phần này hữu ích.
 
-      If you prefer to learn by doing, start with our practical tutorial.
-      If you prefer to learn concepts step by step, start with our guide to main concepts.
-      Like any unfamiliar technology, React does have a learning curve. With practice and some patience, you will get the hang of it.
+      Nếu bạn muốn học bằng cách thực hành, hãy bắt đầu với bài hướng dẫn thực hành của chúng tôi.
+      Nếu bạn muốn học từng bước một về các khái niệm, hãy bắt đầu với hướng dẫn của chúng tôi về các khái niệm chính.
+      Giống như bất kỳ công nghệ mới nào khác, React đều có một độ cong học. Với sự thực hành và một chút kiên nhẫn, bạn sẽ làm quen với nó.
 
-      First Examples
-      The React homepage contains a few small React examples with a live editor. Even if you don’t know anything about React yet, try changing their code and see how it affects the result.
+      Ví Dụ Đầu Tiên
+      Trang chủ React chứa một số ví dụ nhỏ về React với một trình soạn thảo trực tiếp. Ngay cả khi bạn chưa biết gì về React, hãy thử thay đổi mã của họ và xem nó ảnh hưởng như thế nào.
 
-      React for Beginners
-      If you feel that the React documentation goes at a faster pace than you’re comfortable with, check out this overview of React by Tania Rascia. It introduces the most important React concepts in a detailed, beginner-friendly way. Once you’re done, give the documentation another try!
+      React cho Người Mới Bắt Đầu
+      Nếu bạn cảm thấy tài liệu React diễn ra nhanh hơn so với mức độ thoải mái của bạn, hãy kiểm tra tổng quan về React của Tania Rascia. Nó giới thiệu các khái niệm quan trọng nhất của React một cách chi tiết và thân thiện với người mới bắt đầu. Khi bạn hoàn thành, hãy thử lại đọc tài liệu!
 
-      React for Designers
-      If you’re coming from a design background, these resources are a great place to get started.
+      React cho Người Thiết Kế
+      Nếu bạn đến từ nền tảng thiết kế, những nguồn tài nguyên này là một nơi tuyệt vời để bắt đầu.
 
-      JavaScript Resources
-      The React documentation assumes some familiarity with programming in the JavaScript language. You don’t have to be an expert, but it’s harder to learn both React and JavaScript at the same time.
+      Tài Nguyên JavaScript
+      Tài liệu React giả định một số hiểu biết về lập trình trong ngôn ngữ JavaScript. Bạn không cần phải là một chuyên gia, nhưng việc học cùng lúc cả React và JavaScript có thể khó khăn hơn.
 
-      We recommend going through this JavaScript overview to check your knowledge level. It will take you between 30 minutes and an hour but you will feel more confident learning React.
+      Chúng tôi khuyến nghị bạn đọc qua bảng tổng quan JavaScript này để kiểm tra mức độ hiểu biết của bạn. Điều này sẽ mất khoảng từ 30 phút đến một giờ nhưng bạn sẽ cảm thấy tự tin hơn khi học React.
     </h3>
   </div>
 );
