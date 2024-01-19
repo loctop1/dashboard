@@ -1,8 +1,12 @@
 import React from 'react';
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, StackingColumnSeries, Tooltip } from '@syncfusion/ej2-react-charts';
 import { stackedCustomSeries, stackedPrimaryXAxis, stackedPrimaryYAxis } from '../../data/dummy';
+import { useStateContext } from '../../contexts/ContextProvider';
 
 const Stacked = ({ width, height }) => {
+
+    const { currentMode } = useStateContext();
+
     return (
         // Biểu đồ
         <ChartComponent
@@ -17,6 +21,7 @@ const Stacked = ({ width, height }) => {
             tooltip={{ enable: true }}
             /**được kích hoạt để hiển thị tooltip khi di chuột qua các điểm trên biểu đồ. */
             legendSettings={{ background: 'white' }}
+            background={currentMode === 'Dark' ? '#33373E' : '#fff'}
         >
             {/* Chèn các dịch vụ vào biểu đồ */}
             <Inject services={[Legend, Category, StackingColumnSeries, Tooltip]} />

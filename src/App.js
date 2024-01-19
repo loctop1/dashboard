@@ -9,17 +9,19 @@ import { ECommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Ka
 import { useStateContext } from './contexts/ContextProvider';
 
 const App = () => {
-    const { activeMenu } = useStateContext();
+    const { activeMenu, themeSettings, setThemeSettings, currentColor, currentMode } = useStateContext();
+
 
     return (
         <>
-            <div>
+            <div className={currentMode === 'Dark' ? 'dark' : 'light'}>
                 <BrowserRouter>
                     <div className='flex relative dark:bg-main-dark-bg'>
                         <div className='fixed right-4 bottom-4' style={{ zIndex: '1000' }}>
                             {/* Nút cài đặt */}
                             <TooltipComponent content="Cài đặt" position='Top'>
                                 <button
+                                    onClick={() => setThemeSettings(true)}
                                     type="button"
                                     className='
                                         text-3xl
@@ -28,7 +30,7 @@ const App = () => {
                                         hover:bg-light-gray
                                         text-white
                                     '
-                                    style={{ background: 'blue', borderRadius: '50%' }}
+                                    style={{ background: currentColor, borderRadius: '50%' }}
                                 >
                                     <FiSettings />
                                 </button>
@@ -86,6 +88,9 @@ const App = () => {
 
                             {/* Menu chính */}
                             <div>
+
+                                {themeSettings && <ThemeSettings />}
+
                                 <Routes>
                                     {/* Trang quản trị */}
                                     <Route path='/' element={<ECommerce />} />

@@ -22,6 +22,32 @@ export const ContextProvider = ({ children }) => {
     //Reponsive
     const [screenSize, setScreenSize] = useState(undefined);
 
+    // Màu sắc giao diện
+    const [currentColor, setCurrentColor] = useState('#03C9D7');
+
+    //Chức năng sáng tối
+    const [currentMode, setCurrentMode] = useState('Light');
+
+    const [themeSettings, setThemeSettings] = useState(false);
+
+    //Chức năng sáng tối
+    const setMode = (e) => {
+        setCurrentMode(e.target.value);
+
+        localStorage.setItem('themeMode', e.target.value);
+
+        setThemeSettings(false)
+    }
+
+    // Màu sắc giao diện
+    const setColor = (color) => {
+        setCurrentColor(color);
+
+        localStorage.setItem('colorMode', color);
+
+        setThemeSettings(false)
+    }
+
     const handleClick = (clicked) => {
         /**Hàm này được sử dụng để xử lý sự kiện click. */
         setIsClicked({ ...initialState, [clicked]: true })
@@ -32,7 +58,22 @@ export const ContextProvider = ({ children }) => {
      * các thuộc tính khác về giá trị ban đầu của chúng. */
 
     return (
-        <StateContext.Provider value={{ activeMenu, setActiveMenu, isClicked, setIsClicked, handleClick, screenSize, setScreenSize }}>
+        <StateContext.Provider
+            value={{
+                activeMenu,
+                setActiveMenu,
+                isClicked,
+                setIsClicked,
+                handleClick,
+                screenSize,
+                setScreenSize,
+                currentColor,
+                currentMode,
+                themeSettings,
+                setThemeSettings,
+                setMode,
+                setColor
+            }}>
             {/* Bao bọc tất cả các thành phần con bên trong context provider. Giá trị của activeMenu và setActiveMenu được chia sẻ thông qua context. */}
             {children}
             {/* Hiển thị tất cả các thành phần con được truyền vào ContextProvider.*/}

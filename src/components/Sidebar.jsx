@@ -9,7 +9,7 @@ import { useStateContext } from '../contexts/ContextProvider'
 
 const Sidebar = () => {
   // Chức năng đóng mở Menu Sidebar
-  const { activeMenu, setActiveMenu, screenSize } = useStateContext();
+  const { activeMenu, setActiveMenu, screenSize, currentColor, currentMode } = useStateContext();
 
   //Chức năng đóng sidebar khi reponsive
   const handleCloseSideBar = () => {
@@ -39,7 +39,7 @@ const Sidebar = () => {
       {
         activeMenu && (
           <>
-            <div className='flex justify-between items-center bg-white sticky top-0'>
+            <div className={`flex justify-between items-center ${currentMode === 'Dark' ? 'dark:bg-secondary-dark-bg' : 'bg-white'} sticky top-0`}>
               <Link
                 to='/'
                 onClick={handleCloseSideBar}
@@ -64,7 +64,16 @@ const Sidebar = () => {
                   onClick={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
                   /*Khi nút được nhấn, nó sẽ gọi hàm setActiveMenu với một hàm lambda. Hàm lambda này thực hiện việc đảo ngược giá trị trạng thái trước đó 
                   (prevActiveMenu). */
-                  className='text-xl rounded-full p-3 hover:text-white hover:bg-neutral-950 mt-4 block'
+                  className={`
+                    text-xl 
+                    rounded-full p-3 
+                    ${currentMode === 'Dark' ? 'text-white' : 'text-black'}
+                    ${currentMode === 'Dark' ? 'hover:text-white' : 'hover:text-white'}  
+                    ${currentMode === 'Dark' ? 'hover:bg-red-700' : 'hover:bg-neutral-950'}
+                    mt-4 
+                    block
+                  `
+                  }
                 >
                   <MdOutlineCancel />
                 </button>
@@ -82,6 +91,9 @@ const Sidebar = () => {
                       key={Link.name}
                       onClick={handleCloseSideBar}
                       className={({ isActive }) => isActive ? activeLink : normalLink}
+                      style={({ isActive }) => ({
+                        backgroundColor: isActive ? currentColor : ''
+                      })}
                     >
                       {Link.icon}
                       <span className='capitalize'>
@@ -95,7 +107,7 @@ const Sidebar = () => {
           </>
         )
       }
-    </div>
+    </div >
   )
 }
 

@@ -19,7 +19,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 )
 
 const Navbar = () => {
-  const { activeMenu, setActiveMenu, handleClick, isClicked, setIsClicked, screenSize, setScreenSize } = useStateContext();
+  const { activeMenu, setActiveMenu, handleClick, isClicked, setIsClicked, screenSize, setScreenSize, currentContext, currentColor, currentMode } = useStateContext();
 
   //Reponsive
   useEffect(() => {
@@ -44,27 +44,27 @@ const Navbar = () => {
 
   return (
     <div className='flex justify-between p-2 md:mx-6 relative'>
-      <NavButton title='Menu' customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)} color="blue" icon={<AiOutlineMenu />} />
+      <NavButton title='Menu' customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)} color={currentColor} icon={<AiOutlineMenu />} />
       <div className='flex'>
-        <NavButton title='Giỏ hàng' customFunc={() => handleClick('cart')} color="blue" icon={<FiShoppingCart />} />
-        <NavButton title='Tin nhắn' dotColor="#03C9D7" customFunc={() => handleClick('chat')} color="blue" icon={<BsChatLeft />} />
-        <NavButton title='Thông báo' dotColor="red" customFunc={() => handleClick('notification')} color="blue" icon={<RiNotification3Line />} />
+        <NavButton title='Giỏ hàng' customFunc={() => handleClick('cart')} color={currentColor} icon={<FiShoppingCart />} />
+        <NavButton title='Tin nhắn' dotColor="#03C9D7" customFunc={() => handleClick('chat')} color={currentColor} icon={<BsChatLeft />} />
+        <NavButton title='Thông báo' dotColor="red" customFunc={() => handleClick('notification')} color={currentColor} icon={<RiNotification3Line />} />
         <TooltipComponent content="Hồ sơ" position='BottomCenter'>
-          <div className='flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg' onClick={() => handleClick('userProfile')}>
+          <div className={`flex items-center gap-2 cursor-pointer p-1 ${currentMode === 'Dark' ? '' : 'hover:bg-light-gray'} rounded-lg`} onClick={() => handleClick('userProfile')}>
             <img src={avatar} alt="" className='rounded-full w-8 h-8' />
             <p>
-              <span className='text-black text-14'>Xin chào, </span> {''}
-              <span className='text-black font-medium ml-1 text-base'>Tuấn Lộc</span>
+              <span className={`${currentMode === 'Dark' ? ' text-white' : 'text-black'} text-14`}>Xin chào, </span> {''}
+              <span className={`${currentMode === 'Dark' ? ' text-white' : 'text-black'} font-medium ml-1 text-base`}>Tuấn Lộc</span>
             </p>
-            <MdKeyboardArrowDown className='text-black text-14' />
+            <MdKeyboardArrowDown className={`${currentMode === 'Dark' ? ' text-white' : 'text-black'} text-14`} />
           </div>
         </TooltipComponent>
         {isClicked.cart && <Cart />}
         {isClicked.chat && <Chat />}
         {isClicked.notification && <Notification />}
         {isClicked.userProfile && <UserProfile />}
-      </div>
-    </div>
+      </div >
+    </div >
   )
 }
 

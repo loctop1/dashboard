@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BsCurrencyDollar } from 'react-icons/bs';
 import { GoDotFill } from "react-icons/go";
 import { Stacked, Pie, Button, LineChart, SparkLine } from '../components';
@@ -6,6 +6,10 @@ import { earningData, SparklineAreaData, ecomPieChartData } from '../data/dummy'
 import { useStateContext } from '../contexts/ContextProvider';
 
 const ECommerce = () => {
+
+    //Chức năng đổi màu giao diện
+    const { currentColor, currentMode } = useStateContext();
+
     return (
         <div className='mt-24'>
             {/* Homepage */}
@@ -20,21 +24,20 @@ const ECommerce = () => {
                         lg:w-80
                         p-8 
                         pt-9 
-                        m-3 
-                        bg-hero-pattern 
+                        m-3                 
                         bg-no-repeat 
                         bg-cover 
                         bg-center
                     '
                 >
-                    <div className='flex justify-between items-center'>
+                    <div className=' flex justify-between items-center'>
                         <div>
-                            <p className='font-semibold text-gray-600 text-xl'>Thu nhập</p>
+                            <p className={`font-semibold ${currentMode === 'Dark' ? 'dark:text-gray-200' : 'text-gray-600'}  text-xl`}>Thu nhập</p>
                             <p className='text-2xl'>$63,448.78</p>
                         </div>
                     </div>
                     <div className='mt-6'>
-                        <Button color="white" bgColor="blue" text="Tải xuống" borderRadius="10px" size="md" />
+                        <Button color="white" bgColor={currentColor} text="Tải xuống" borderRadius="10px" size="md" />
                     </div>
                 </div>
                 <div className='flex m-3 flex-wrap justify-center gap-1 items-center'>
@@ -51,7 +54,7 @@ const ECommerce = () => {
                                     {item.percentage}
                                 </span>
                             </p>
-                            <p className='text-sm text-gray-600 mt-1'>
+                            <p className={`text-sm ${currentMode === 'Dark' ? 'dark:text-gray-200' : 'text-gray-600'} mt-1`}>
                                 {item.title}
                             </p>
                         </div>
@@ -64,7 +67,7 @@ const ECommerce = () => {
                     <div className='flex justify-between'>
                         <p className='font-semibold text-xl'>Cập nhật doanh thu</p>
                         <div className='flex items-center gap-4'>
-                            <p className='flex items-center gap-2 text-gray-600 hover:drop-shadow-xl'>
+                            <p className={`flex items-center gap-2 ${currentMode === 'Dark' ? 'dark:text-gray-200' : 'text-gray-600'} hover:drop-shadow-xl`}>
                                 <span>
                                     <GoDotFill />
                                 </span>
@@ -87,7 +90,7 @@ const ECommerce = () => {
                                         23%
                                     </span>
                                 </p>
-                                <p className='text-gray-600 mt-1'>
+                                <p className={`${currentMode === 'Dark' ? 'dark:text-gray-200' : 'text-gray-600'} mt-1`}>
                                     Ngân sách
                                 </p>
                             </div>
@@ -95,7 +98,7 @@ const ECommerce = () => {
                                 <p>
                                     <span className='text-3xl font-semibold'>$48,487</span>
                                 </p>
-                                <p className='text-gray-600 mt-1'>
+                                <p className={`${currentMode === 'Dark' ? 'dark:text-gray-200' : 'text-gray-600'} mt-1`}>
                                     Chi phí
                                 </p>
                             </div>
@@ -103,17 +106,17 @@ const ECommerce = () => {
                             {/* Biểu đồ báo cáo */}
                             <div className='mt-5'>
                                 <SparkLine
-                                    currentColor="blue"
+                                    currentColor={currentColor}
                                     id="line-sparkline"
                                     type="Line"
                                     height="80px"
                                     width="250px"
                                     data={SparklineAreaData}
-                                    color="blue"
+                                    color={currentColor}
                                 />
                             </div>
                             <div className='mt-10'>
-                                <Button color="white" bgColor="blue" text="Xuất báo cáo" borderRadius="10px" />
+                                <Button color="white" bgColor={currentColor} text="Xuất báo cáo" borderRadius="10px" />
                             </div>
                         </div>
                         <div>
