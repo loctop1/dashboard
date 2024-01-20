@@ -72,7 +72,8 @@ export const ContextProvider = ({ children }) => {
                 themeSettings,
                 setThemeSettings,
                 setMode,
-                setColor
+                setColor,
+                initialState
             }}>
             {/* Bao bọc tất cả các thành phần con bên trong context provider. Giá trị của activeMenu và setActiveMenu được chia sẻ thông qua context. */}
             {children}

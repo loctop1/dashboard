@@ -232,7 +232,7 @@ export const areaCustomSeries = [
     dataSource: areaChartData[1],
     xName: 'x',
     yName: 'y',
-    name: 'France',
+    name: 'Pháp',
     opacity: '0.8',
     type: 'SplineArea',
     width: '2',
@@ -251,18 +251,18 @@ export const areaCustomSeries = [
 export const barChartData = [
   [
     { x: 'Mỹ', y: 46 },
-    { x: 'GBR', y: 27 },
-    { x: 'CHN', y: 26 },
+    { x: 'Anh', y: 27 },
+    { x: 'Trung Quốc', y: 26 },
   ],
   [
     { x: 'Mỹ', y: 37 },
-    { x: 'GBR', y: 23 },
-    { x: 'CHN', y: 18 },
+    { x: 'Anh', y: 23 },
+    { x: 'Trung Quốc', y: 18 },
   ],
   [
     { x: 'Mỹ', y: 38 },
-    { x: 'GBR', y: 17 },
-    { x: 'CHN', y: 26 },
+    { x: 'Anh', y: 17 },
+    { x: 'Trung Quốc', y: 26 },
   ],
 ];
 
@@ -271,8 +271,9 @@ export const barCustomSeries = [
     dataSource: barChartData[0],
     xName: 'x',
     yName: 'y',
-    name: 'Gold',
+    name: 'Vàng',
     type: 'Column',
+    fill: 'gold',
     marker: {
       dataLabel: {
         visible: true,
@@ -285,8 +286,9 @@ export const barCustomSeries = [
     dataSource: barChartData[1],
     xName: 'x',
     yName: 'y',
-    name: 'Silver',
+    name: 'Bạc',
     type: 'Column',
+    fill: 'silver',
     marker: {
       dataLabel: {
         visible: true,
@@ -299,8 +301,9 @@ export const barCustomSeries = [
     dataSource: barChartData[2],
     xName: 'x',
     yName: 'y',
-    name: 'Bronze',
+    name: 'Đồng',
     type: 'Column',
+    fill: '#e7bd7c',
     marker: {
       dataLabel: {
         visible: true,
@@ -312,18 +315,18 @@ export const barCustomSeries = [
 ];
 export const colorMappingData = [
   [
-    { x: 'Jan', y: 6.96 },
-    { x: 'Feb', y: 8.9 },
-    { x: 'Mar', y: 12 },
-    { x: 'Apr', y: 17.5 },
-    { x: 'May', y: 22.1 },
-    { x: 'June', y: 25 },
-    { x: 'July', y: 29.4 },
-    { x: 'Aug', y: 29.6 },
-    { x: 'Sep', y: 25.8 },
-    { x: 'Oct', y: 21.1 },
-    { x: 'Nov', y: 15.5 },
-    { x: 'Dec', y: 9.9 },
+    { x: 'Tháng 1', y: 6.96 },
+    { x: 'Tháng 2', y: 8.9 },
+    { x: 'Tháng 3', y: 12 },
+    { x: 'Tháng 4', y: 17.5 },
+    { x: 'Tháng 5', y: 22.1 },
+    { x: 'Tháng 6', y: 25 },
+    { x: 'Tháng 7', y: 29.4 },
+    { x: 'Tháng 8', y: 29.6 },
+    { x: 'Tháng 9', y: 25.8 },
+    { x: 'Tháng 10', y: 21.1 },
+    { x: 'Tháng 11', y: 15.5 },
+    { x: 'Tháng 12', y: 9.9 },
   ],
   ['#FFFF99'],
   ['#FFA500'],
@@ -357,7 +360,7 @@ export const rangeColorMapping = [
 export const ColorMappingPrimaryXAxis = {
   valueType: 'Category',
   majorGridLines: { width: 0 },
-  title: 'Months',
+  title: 'Trung Bình Nhiệt Độ',
 };
 
 export const ColorMappingPrimaryYAxis = {
@@ -365,10 +368,11 @@ export const ColorMappingPrimaryYAxis = {
   majorTickLines: { width: 0 },
   minorTickLines: { width: 0 },
   labelFormat: '{value}°C',
-  title: 'Temperature',
+  title: 'Nhiệt Độ Trung Bình',
 };
 
 export const FinancialPrimaryXAxis = {
+  title: 'Giai Đoạn',
   valueType: 'DateTime',
   minimum: new Date('2016, 12, 31'),
   maximum: new Date('2017, 9, 30'),
@@ -377,7 +381,7 @@ export const FinancialPrimaryXAxis = {
 };
 
 export const FinancialPrimaryYAxis = {
-  title: 'Price',
+  title: 'Giá Tiền',
   minimum: 100,
   maximum: 180,
   interval: 20,
@@ -611,9 +615,9 @@ export const links = [
         path: `/dashboard/${convertToSlug('Kim tự tháp')}`,
       },
       {
-        name: 'stacked',
+        name: 'Doanh Thu',
         icon: <AiOutlineBarChart />,
-        path: `/dashboard/${convertToSlug('stacked')}`,
+        path: `/dashboard/${convertToSlug('Doanh Thu')}`,
       },
     ],
   },
@@ -623,22 +627,22 @@ export const cartData = [
   {
     image:
       product5,
-    name: 'butterscotch ice-cream',
-    category: 'Milk product',
+    name: 'Kem Bơ',
+    category: 'Sản phẩm từ sữa',
     price: '$250',
   },
   {
     image:
       product6,
-    name: 'Supreme Cà Chua Tươi',
-    category: 'Vegetable Item',
+    name: 'Cà Chua Tươi',
+    category: 'Trái cây',
     price: '$450',
   },
   {
     image:
       product7,
-    name: 'Red color candy',
-    category: 'Food Item',
+    name: 'Kem Ốc Quế',
+    category: 'Đồ ngọt',
     price: '$190',
   },
 ];
@@ -647,30 +651,30 @@ export const chatData = [
   {
     image:
       avatar2,
-    message: 'Roman Joined the Team!',
-    desc: 'Congratulate him',
-    time: '9:08 AM',
+    message: 'Dương Chiến Thắng đã tham gia nhóm',
+    desc: 'Chúc mừng anh ấy',
+    time: '9:08 Sáng',
   },
   {
     image:
       avatar3,
-    message: 'New message received',
-    desc: 'Salma sent you new message',
-    time: '11:56 AM',
+    message: 'Bạn đã nhận được tin nhắn mới',
+    desc: 'Châu Duy Khánh đã gửi cho bạn tin nhắn mới',
+    time: '11:56 Sáng',
   },
   {
     image:
       avatar4,
-    message: 'New Payment received',
-    desc: 'Check your earnings',
-    time: '4:39 AM',
+    message: 'Ngô Tuấn Long đã chuyển khoản cho bạn',
+    desc: 'Kiểm tra thu nhập của bạn',
+    time: '4:39 Sáng',
   },
   {
     image:
       avatar,
-    message: 'Jolly Đã Hoàn Thành Nhiệm vụs',
-    desc: 'Assign her new Nhiệm vụs',
-    time: '1:12 AM',
+    message: 'Bạn đã hoàn thành nhiệm vụ',
+    desc: 'Giao nhiệm vụ đó cho người khác',
+    time: '1:12 Sáng',
   },
 ];
 
@@ -718,8 +722,8 @@ export const recentTransactions = [
   {
     icon: <BsCurrencyDollar />,
     amount: '+$350',
-    title: 'Paypal Transfer',
-    desc: 'Money Added',
+    title: 'Chuyển khoản qua Paypal',
+    desc: 'Đã chuyển khoản',
     iconColor: '#03C9D7',
     iconBg: '#E5FAFB',
     pcColor: 'green-600',
@@ -727,8 +731,8 @@ export const recentTransactions = [
   {
     icon: <BsShield />,
     amount: '-$560',
-    desc: 'Bill Payment',
-    title: 'Wallet',
+    desc: 'Thanh toán hóa đơn',
+    title: 'Ví VnPay',
     iconColor: 'rgb(0, 194, 146)',
     iconBg: 'rgb(235, 250, 242)',
     pcColor: 'red-600',
@@ -736,8 +740,8 @@ export const recentTransactions = [
   {
     icon: <FiCreditCard />,
     amount: '+$350',
-    title: 'Credit Card',
-    desc: 'Money reversed',
+    title: 'Thẻ tín dụng',
+    desc: 'Đã chuyển khoản',
     iconColor: 'rgb(255, 244, 229)',
     iconBg: 'rgb(254, 201, 15)',
 
@@ -746,8 +750,8 @@ export const recentTransactions = [
   {
     icon: <TiTick />,
     amount: '+$350',
-    title: 'Bank Transfer',
-    desc: 'Money Added',
+    title: 'Chuyển khoản ngân hàng',
+    desc: 'Đã chuyển khoản',
 
     iconColor: 'rgb(228, 106, 118)',
     iconBg: 'rgb(255, 244, 229)',
@@ -757,8 +761,8 @@ export const recentTransactions = [
     icon: <BsCurrencyDollar />,
     amount: '-$50',
     percentage: '+38%',
-    title: 'Refund',
-    desc: 'Payment Sent',
+    title: 'Đền bù',
+    desc: 'Đã gửi thanh toán',
     iconColor: '#03C9D7',
     iconBg: '#E5FAFB',
     pcColor: 'red-600',
@@ -769,24 +773,24 @@ export const weeklyStats = [
   {
     icon: <FiShoppingCart />,
     amount: '-$560',
-    title: 'Top Sales',
-    desc: 'Johnathan Doe',
+    title: 'Bán hàng hàng đầu',
+    desc: 'Dương Chiến Thắng',
     iconBg: '#FB9678',
     pcColor: 'red-600',
   },
   {
     icon: <FiStar />,
     amount: '-$560',
-    title: 'Best Seller',
-    desc: 'MaterialPro Admin',
+    title: 'Người bán hàng giỏi nhất',
+    desc: 'Quản trị viên Nguyễn Tuấn Lộc',
     iconBg: 'rgb(254, 201, 15)',
     pcColor: 'red-600',
   },
   {
     icon: <BsChatLeft />,
     amount: '+$560',
-    title: 'Most Commented',
-    desc: 'Ample Admin',
+    title: 'Bình luận nhiều nhất',
+    desc: 'Vũ Mạnh Khôi',
     iconBg: '#00C292',
     pcColor: 'green-600',
   },
@@ -834,15 +838,15 @@ export const productsPerformance = [
 export const medicalproBranding = {
   data: [
     {
-      title: 'Due Date',
-      desc: 'Oct 23, 2021',
+      title: 'Ngày đáo hạn',
+      desc: '23/10/2023',
     },
     {
-      title: 'Budget',
+      title: 'Ngân sách',
       desc: '$98,500',
     },
     {
-      title: 'Expense',
+      title: 'Chi phí',
       desc: '$63,000',
     },
   ],
@@ -910,22 +914,22 @@ export const themeColors = [
 export const userProfileData = [
   {
     icon: <BsCurrencyDollar />,
-    title: 'My Profile',
-    desc: 'Account Settings',
+    title: 'Thông tin của tôi',
+    desc: 'Cài đặt tài khoản',
     iconColor: '#03C9D7',
     iconBg: '#E5FAFB',
   },
   {
     icon: <BsShield />,
-    title: 'My Inbox',
-    desc: 'Messages & Emails',
+    title: 'Hộp thư của tôi',
+    desc: 'Tin nhắn & Email',
     iconColor: 'rgb(0, 194, 146)',
     iconBg: 'rgb(235, 250, 242)',
   },
   {
     icon: <FiCreditCard />,
-    title: 'My Nhiệm vụs',
-    desc: 'To-do and Daily Nhiệm vụs',
+    title: 'Nhiệm vụ của tôi',
+    desc: 'Việc cần làm và nhiệm vụ hàng ngày',
     iconColor: 'rgb(255, 244, 229)',
     iconBg: 'rgb(254, 201, 15)',
   },
@@ -1548,7 +1552,7 @@ export const employeesData = [
     EmployeeID: 1,
     Name: 'Châu Duy Khánh',
     Title: 'Chuyên Viên Bán Hàng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1558,7 +1562,7 @@ export const employeesData = [
     EmployeeID: 2,
     Name: 'Châu Duy Khánh',
     Title: 'Trường Phòng Tiếp Thị',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1568,7 +1572,7 @@ export const employeesData = [
     EmployeeID: 3,
     Name: 'Ngô Tuấn Long',
     Title: 'Nhà Tuyển Dụng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1578,7 +1582,7 @@ export const employeesData = [
     EmployeeID: 4,
     Name: 'Dương Chiến Thắng',
     Title: 'Trường Phòng Tiếp Thị',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1588,7 +1592,7 @@ export const employeesData = [
     EmployeeID: 5,
     Name: 'Nguyễn Tuấn Lộc',
     Title: 'Nhà Tuyển Dụng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1598,7 +1602,7 @@ export const employeesData = [
     EmployeeID: 4,
     Name: 'Nguyễn Tuấn Lộc',
     Title: 'Trường Phòng Tiếp Thị',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1608,7 +1612,7 @@ export const employeesData = [
     EmployeeID: 5,
     Name: 'Dương Chiến Thắng',
     Title: 'Nhà Tuyển Dụng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1618,7 +1622,7 @@ export const employeesData = [
     EmployeeID: 1,
     Name: 'Châu Duy Khánh',
     Title: 'Chuyên Viên Bán Hàng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1629,7 +1633,7 @@ export const employeesData = [
     EmployeeID: 2,
     Name: 'Châu Duy Khánh',
     Title: 'Trường Phòng Tiếp Thị',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1639,7 +1643,7 @@ export const employeesData = [
     EmployeeID: 3,
     Name: 'Ngô Tuấn Long',
     Title: 'Nhà Tuyển Dụng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1649,7 +1653,7 @@ export const employeesData = [
     EmployeeID: 4,
     Name: 'Dương Chiến Thắng',
     Title: 'Trường Phòng Tiếp Thị',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1659,7 +1663,7 @@ export const employeesData = [
     EmployeeID: 5,
     Name: 'Nguyễn Tuấn Lộc',
     Title: 'Nhà Tuyển Dụng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1669,7 +1673,7 @@ export const employeesData = [
     EmployeeID: 4,
     Name: 'Nguyễn Tuấn Lộc',
     Title: 'Trường Phòng Tiếp Thị',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1679,7 +1683,7 @@ export const employeesData = [
     EmployeeID: 5,
     Name: 'Dương Chiến Thắng',
     Title: 'Nhà Tuyển Dụng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1689,7 +1693,7 @@ export const employeesData = [
     EmployeeID: 1,
     Name: 'Châu Duy Khánh',
     Title: 'Chuyên Viên Bán Hàng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1699,7 +1703,7 @@ export const employeesData = [
     EmployeeID: 2,
     Name: 'Châu Duy Khánh',
     Title: 'Trường Phòng Tiếp Thị',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1709,7 +1713,7 @@ export const employeesData = [
     EmployeeID: 3,
     Name: 'Ngô Tuấn Long',
     Title: 'Nhà Tuyển Dụng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1719,7 +1723,7 @@ export const employeesData = [
     EmployeeID: 4,
     Name: 'Dương Chiến Thắng',
     Title: 'Trường Phòng Tiếp Thị',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1729,7 +1733,7 @@ export const employeesData = [
     EmployeeID: 5,
     Name: 'Nguyễn Tuấn Lộc',
     Title: 'Nhà Tuyển Dụng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1739,7 +1743,7 @@ export const employeesData = [
     EmployeeID: 4,
     Name: 'Nguyễn Tuấn Lộc',
     Title: 'Trường Phòng Tiếp Thị',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1749,7 +1753,7 @@ export const employeesData = [
     EmployeeID: 5,
     Name: 'Dương Chiến Thắng',
     Title: 'Nhà Tuyển Dụng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1759,7 +1763,7 @@ export const employeesData = [
     EmployeeID: 1,
     Name: 'Châu Duy Khánh',
     Title: 'Chuyên Viên Bán Hàng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1770,7 +1774,7 @@ export const employeesData = [
     EmployeeID: 2,
     Name: 'Châu Duy Khánh',
     Title: 'Trường Phòng Tiếp Thị',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1780,7 +1784,7 @@ export const employeesData = [
     EmployeeID: 3,
     Name: 'Ngô Tuấn Long',
     Title: 'Nhà Tuyển Dụng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1790,7 +1794,7 @@ export const employeesData = [
     EmployeeID: 4,
     Name: 'Dương Chiến Thắng',
     Title: 'Trường Phòng Tiếp Thị',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1800,7 +1804,7 @@ export const employeesData = [
     EmployeeID: 5,
     Name: 'Nguyễn Tuấn Lộc',
     Title: 'Nhà Tuyển Dụng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1810,7 +1814,7 @@ export const employeesData = [
     EmployeeID: 4,
     Name: 'Nguyễn Tuấn Lộc',
     Title: 'Trường Phòng Tiếp Thị',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1820,7 +1824,7 @@ export const employeesData = [
     EmployeeID: 5,
     Name: 'Dương Chiến Thắng',
     Title: 'Nhà Tuyển Dụng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1830,7 +1834,7 @@ export const employeesData = [
     EmployeeID: 1,
     Name: 'Châu Duy Khánh',
     Title: 'Chuyên Viên Bán Hàng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1841,7 +1845,7 @@ export const employeesData = [
     EmployeeID: 2,
     Name: 'Châu Duy Khánh',
     Title: 'Trường Phòng Tiếp Thị',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1851,7 +1855,7 @@ export const employeesData = [
     EmployeeID: 3,
     Name: 'Ngô Tuấn Long',
     Title: 'Nhà Tuyển Dụng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1861,7 +1865,7 @@ export const employeesData = [
     EmployeeID: 4,
     Name: 'Dương Chiến Thắng',
     Title: 'Trường Phòng Tiếp Thị',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1871,7 +1875,7 @@ export const employeesData = [
     EmployeeID: 5,
     Name: 'Nguyễn Tuấn Lộc',
     Title: 'Nhà Tuyển Dụng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1881,7 +1885,7 @@ export const employeesData = [
     EmployeeID: 4,
     Name: 'Nguyễn Tuấn Lộc',
     Title: 'Trường Phòng Tiếp Thị',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1891,7 +1895,7 @@ export const employeesData = [
     EmployeeID: 5,
     Name: 'Dương Chiến Thắng',
     Title: 'Nhà Tuyển Dụng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1901,7 +1905,7 @@ export const employeesData = [
     EmployeeID: 1,
     Name: 'Châu Duy Khánh',
     Title: 'Chuyên Viên Bán Hàng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1912,7 +1916,7 @@ export const employeesData = [
     EmployeeID: 2,
     Name: 'Châu Duy Khánh',
     Title: 'Trường Phòng Tiếp Thị',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1922,7 +1926,7 @@ export const employeesData = [
     EmployeeID: 3,
     Name: 'Ngô Tuấn Long',
     Title: 'Nhà Tuyển Dụng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1932,7 +1936,7 @@ export const employeesData = [
     EmployeeID: 4,
     Name: 'Dương Chiến Thắng',
     Title: 'Trường Phòng Tiếp Thị',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1942,7 +1946,7 @@ export const employeesData = [
     EmployeeID: 5,
     Name: 'Nguyễn Tuấn Lộc',
     Title: 'Nhà Tuyển Dụng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1952,7 +1956,7 @@ export const employeesData = [
     EmployeeID: 4,
     Name: 'Nguyễn Tuấn Lộc',
     Title: 'Trường Phòng Tiếp Thị',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1962,7 +1966,7 @@ export const employeesData = [
     EmployeeID: 5,
     Name: 'Dương Chiến Thắng',
     Title: 'Nhà Tuyển Dụng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1972,7 +1976,7 @@ export const employeesData = [
     EmployeeID: 1,
     Name: 'Châu Duy Khánh',
     Title: 'Chuyên Viên Bán Hàng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1983,7 +1987,7 @@ export const employeesData = [
     EmployeeID: 2,
     Name: 'Châu Duy Khánh',
     Title: 'Trường Phòng Tiếp Thị',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -1993,7 +1997,7 @@ export const employeesData = [
     EmployeeID: 3,
     Name: 'Ngô Tuấn Long',
     Title: 'Nhà Tuyển Dụng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -2003,7 +2007,7 @@ export const employeesData = [
     EmployeeID: 4,
     Name: 'Dương Chiến Thắng',
     Title: 'Trường Phòng Tiếp Thị',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -2013,7 +2017,7 @@ export const employeesData = [
     EmployeeID: 5,
     Name: 'Nguyễn Tuấn Lộc',
     Title: 'Nhà Tuyển Dụng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -2023,7 +2027,7 @@ export const employeesData = [
     EmployeeID: 4,
     Name: 'Nguyễn Tuấn Lộc',
     Title: 'Trường Phòng Tiếp Thị',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -2033,7 +2037,7 @@ export const employeesData = [
     EmployeeID: 5,
     Name: 'Dương Chiến Thắng',
     Title: 'Nhà Tuyển Dụng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -2043,7 +2047,7 @@ export const employeesData = [
     EmployeeID: 1,
     Name: 'Châu Duy Khánh',
     Title: 'Chuyên Viên Bán Hàng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -2054,7 +2058,7 @@ export const employeesData = [
     EmployeeID: 2,
     Name: 'Châu Duy Khánh',
     Title: 'Trường Phòng Tiếp Thị',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -2064,7 +2068,7 @@ export const employeesData = [
     EmployeeID: 3,
     Name: 'Ngô Tuấn Long',
     Title: 'Nhà Tuyển Dụng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -2074,7 +2078,7 @@ export const employeesData = [
     EmployeeID: 4,
     Name: 'Dương Chiến Thắng',
     Title: 'Trường Phòng Tiếp Thị',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -2084,7 +2088,7 @@ export const employeesData = [
     EmployeeID: 5,
     Name: 'Nguyễn Tuấn Lộc',
     Title: 'Nhà Tuyển Dụng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -2094,7 +2098,7 @@ export const employeesData = [
     EmployeeID: 4,
     Name: 'Nguyễn Tuấn Lộc',
     Title: 'Trường Phòng Tiếp Thị',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -2104,7 +2108,7 @@ export const employeesData = [
     EmployeeID: 5,
     Name: 'Dương Chiến Thắng',
     Title: 'Nhà Tuyển Dụng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -2114,7 +2118,7 @@ export const employeesData = [
     EmployeeID: 1,
     Name: 'Châu Duy Khánh',
     Title: 'Chuyên Viên Bán Hàng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -2125,7 +2129,7 @@ export const employeesData = [
     EmployeeID: 2,
     Name: 'Châu Duy Khánh',
     Title: 'Trường Phòng Tiếp Thị',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -2135,7 +2139,7 @@ export const employeesData = [
     EmployeeID: 3,
     Name: 'Ngô Tuấn Long',
     Title: 'Nhà Tuyển Dụng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -2145,7 +2149,7 @@ export const employeesData = [
     EmployeeID: 4,
     Name: 'Dương Chiến Thắng',
     Title: 'Trường Phòng Tiếp Thị',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -2155,7 +2159,7 @@ export const employeesData = [
     EmployeeID: 5,
     Name: 'Nguyễn Tuấn Lộc',
     Title: 'Nhà Tuyển Dụng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -2165,7 +2169,7 @@ export const employeesData = [
     EmployeeID: 4,
     Name: 'Nguyễn Tuấn Lộc',
     Title: 'Trường Phòng Tiếp Thị',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -2175,7 +2179,7 @@ export const employeesData = [
     EmployeeID: 5,
     Name: 'Dương Chiến Thắng',
     Title: 'Nhà Tuyển Dụng',
-    HireDate: '01/02/2021',
+    HireDate: '01/02/2023',
     Country: 'Việt Nam',
     ReportsTo: 'Carson',
     EmployeeImage:
@@ -2911,192 +2915,192 @@ export const scheduleData = [
     Id: 1,
     Subject: 'Vụ Nổ của Sao Betelgeuse',
     Location: 'Trung tâm Vũ trụ Hoa Kỳ',
-    StartTime: '2021-01-10T04:00:00.000Z',
-    EndTime: '2021-01-10T05:30:00.000Z',
+    StartTime: '2023-01-10T04:00:00.000Z',
+    EndTime: '2023-01-10T05:30:00.000Z',
     CategoryColor: '#1aaa55',
   },
   {
     Id: 2,
     Subject: 'Báo cáo vụ tai nạn máy bay ở Thule',
     Location: 'Thành Phố New York',
-    StartTime: '2021-01-11T06:30:00.000Z',
-    EndTime: '2021-01-11T08:30:00.000Z',
+    StartTime: '2023-01-11T06:30:00.000Z',
+    EndTime: '2023-01-11T08:30:00.000Z',
     CategoryColor: '#357cd2',
   },
   {
     Id: 3,
     Subject: 'Chớp Đen của Mặt Trăng',
     Location: 'Trung tâm Vũ trụ Hoa Kỳ',
-    StartTime: '2021-01-12T04:00:00.000Z',
-    EndTime: '2021-01-12T05:30:00.000Z',
+    StartTime: '2023-01-12T04:00:00.000Z',
+    EndTime: '2023-01-12T05:30:00.000Z',
     CategoryColor: '#7fa900',
   },
   {
     Id: 4,
-    Subject: 'Mưa sao băng trong năm 2021',
+    Subject: 'Mưa sao băng trong năm 2023',
     Location: 'Trung tâm Vũ trụ Hoa Kỳ',
-    StartTime: '2021-01-13T07:30:00.000Z',
-    EndTime: '2021-01-13T09:00:00.000Z',
+    StartTime: '2023-01-13T07:30:00.000Z',
+    EndTime: '2023-01-13T09:00:00.000Z',
     CategoryColor: '#ea7a57',
   },
   {
     Id: 5,
     Subject: 'Dải Ngân Hà như Nồi Lẩu Đa Dạng',
     Location: 'Trung tâm Vũ trụ Hoa Kỳ',
-    StartTime: '2021-01-14T06:30:00.000Z',
-    EndTime: '2021-01-14T08:30:00.000Z',
+    StartTime: '2023-01-14T06:30:00.000Z',
+    EndTime: '2023-01-14T08:30:00.000Z',
     CategoryColor: '#00bdae',
   },
   {
     Id: 6,
     Subject: 'Bí ẩn của Tam giác Bermuda',
     Location: 'Bermuda',
-    StartTime: '2021-01-14T04:00:00.000Z',
-    EndTime: '2021-01-14T05:30:00.000Z',
+    StartTime: '2023-01-14T04:00:00.000Z',
+    EndTime: '2023-01-14T05:30:00.000Z',
     CategoryColor: '#f57f17',
   },
   {
     Id: 7,
     Subject: 'Tuyết nhân và Tuyết tuyến',
     Location: 'Dãy Núi Himalayas',
-    StartTime: '2021-01-15T05:30:00.000Z',
-    EndTime: '2021-01-15T07:00:00.000Z',
+    StartTime: '2023-01-15T05:30:00.000Z',
+    EndTime: '2023-01-15T07:00:00.000Z',
     CategoryColor: '#1aaa55',
   },
   {
     Id: 8,
     Subject: 'Cuộc Sống Trên Sao Hỏa',
     Location: 'Trung tâm Vũ trụ Hoa Kỳ',
-    StartTime: '2021-01-16T03:30:00.000Z',
-    EndTime: '2021-01-16T04:30:00.000Z',
+    StartTime: '2023-01-16T03:30:00.000Z',
+    EndTime: '2023-01-16T04:30:00.000Z',
     CategoryColor: '#357cd2',
   },
   {
     Id: 9,
     Subject: 'Nền Văn Minh Ngoài Hành Tinh',
     Location: 'Trung tâm Vũ trụ Hoa Kỳ',
-    StartTime: '2021-01-18T05:30:00.000Z',
-    EndTime: '2021-01-18T07:30:00.000Z',
+    StartTime: '2023-01-18T05:30:00.000Z',
+    EndTime: '2023-01-18T07:30:00.000Z',
     CategoryColor: '#7fa900',
   },
   {
     Id: 10,
     Subject: 'Phòng trưng bày động vật hoang dã',
     Location: 'Châu phi',
-    StartTime: '2021-01-20T05:30:00.000Z',
-    EndTime: '2021-01-20T07:30:00.000Z',
+    StartTime: '2023-01-20T05:30:00.000Z',
+    EndTime: '2023-01-20T07:30:00.000Z',
     CategoryColor: '#ea7a57',
   },
   {
     Id: 11,
-    Subject: 'Bức Ảnh Đẹp Nhất 2021',
+    Subject: 'Bức Ảnh Đẹp Nhất 2023',
     Location: 'Luân Đôn',
-    StartTime: '2021-01-21T04:00:00.000Z',
-    EndTime: '2021-01-21T05:30:00.000Z',
+    StartTime: '2023-01-21T04:00:00.000Z',
+    EndTime: '2023-01-21T05:30:00.000Z',
     CategoryColor: '#00bdae',
   },
   {
     Id: 12,
     Subject: 'Chó con thông minh hơn',
     Location: 'Thụy ĐIển',
-    StartTime: '2021-01-08T04:30:00.000Z',
-    EndTime: '2021-01-08T06:00:00.000Z',
+    StartTime: '2023-01-08T04:30:00.000Z',
+    EndTime: '2023-01-08T06:00:00.000Z',
     CategoryColor: '#f57f17',
   },
   {
     Id: 13,
     Subject: 'Huyền thoại về thiên hà Andromeda',
     Location: 'Trung tâm Vũ trụ Hoa Kỳ',
-    StartTime: '2021-01-06T05:00:00.000Z',
-    EndTime: '2021-01-06T07:00:00.000Z',
+    StartTime: '2023-01-06T05:00:00.000Z',
+    EndTime: '2023-01-06T07:00:00.000Z',
     CategoryColor: '#1aaa55',
   },
   {
     Id: 14,
     Subject: 'Người ngoài hành tinh Và Con người',
     Location: 'Trung tâm Nghiên cứu tại Mỹ',
-    StartTime: '2021-01-05T04:30:00.000Z',
-    EndTime: '2021-01-05T06:00:00.000Z',
+    StartTime: '2023-01-05T04:30:00.000Z',
+    EndTime: '2023-01-05T06:00:00.000Z',
     CategoryColor: '#357cd2',
   },
   {
     Id: 15,
     Subject: 'Sự Thật về Chim Họa Mi',
     Location: 'Bang California',
-    StartTime: '2021-01-19T04:00:00.000Z',
-    EndTime: '2021-01-19T05:30:00.000Z',
+    StartTime: '2023-01-19T04:00:00.000Z',
+    EndTime: '2023-01-19T05:30:00.000Z',
     CategoryColor: '#7fa900',
   },
   {
     Id: 16,
     Subject: 'Người Quan Sát Bầu Trời',
     Location: 'Alaska',
-    StartTime: '2021-01-22T05:30:00.000Z',
-    EndTime: '2021-01-22T07:30:00.000Z',
+    StartTime: '2023-01-22T05:30:00.000Z',
+    EndTime: '2023-01-22T07:30:00.000Z',
     CategoryColor: '#ea7a57',
   },
   {
     Id: 17,
     Subject: 'Vòng tuần hoàn của các mùa',
     Location: 'Trung tâm Nghiên cứu tại Mỹ',
-    StartTime: '2021-01-11T00:00:00.000Z',
-    EndTime: '2021-01-11T02:00:00.000Z',
+    StartTime: '2023-01-11T00:00:00.000Z',
+    EndTime: '2023-01-11T02:00:00.000Z',
     CategoryColor: '#00bdae',
   },
   {
     Id: 18,
     Subject: 'Vũ Trụ: Thiên Hà và Hành Tinh',
     Location: 'Trung tâm Vũ trụ Hoa Kỳ',
-    StartTime: '2021-01-11T11:30:00.000Z',
-    EndTime: '2021-01-11T13:00:00.000Z',
+    StartTime: '2023-01-11T11:30:00.000Z',
+    EndTime: '2023-01-11T13:00:00.000Z',
     CategoryColor: '#f57f17',
   },
   {
     Id: 19,
     Subject: 'Chu kỳ phát triển của ong mật',
     Location: 'San Fransisco',
-    StartTime: '2021-01-14T00:30:00.000Z',
-    EndTime: '2021-01-14T02:00:00.000Z',
+    StartTime: '2023-01-14T00:30:00.000Z',
+    EndTime: '2023-01-14T02:00:00.000Z',
     CategoryColor: '#7fa900',
   },
   {
     Id: 20,
     Subject: 'Nền Văn Minh Ngoài Hành Tinh',
     Location: 'Trung tâm Vũ trụ Hoa Kỳ',
-    StartTime: '2021-01-14T10:30:00.000Z',
-    EndTime: '2021-01-14T12:30:00.000Z',
+    StartTime: '2023-01-14T10:30:00.000Z',
+    EndTime: '2023-01-14T12:30:00.000Z',
     CategoryColor: '#ea7a57',
   },
   {
     Id: 21,
     Subject: 'Nền Văn Minh Ngoài Hành Tinh',
     Location: 'Trung tâm Vũ trụ Hoa Kỳ',
-    StartTime: '2021-01-10T08:30:00.000Z',
-    EndTime: '2021-01-10T10:30:00.000Z',
+    StartTime: '2023-01-10T08:30:00.000Z',
+    EndTime: '2023-01-10T10:30:00.000Z',
     CategoryColor: '#ea7a57',
   },
   {
     Id: 22,
     Subject: 'Vòng tuần hoàn của các mùa',
     Location: 'Trung tâm Nghiên cứu tại Mỹ',
-    StartTime: '2021-01-12T09:00:00.000Z',
-    EndTime: '2021-01-12T10:30:00.000Z',
+    StartTime: '2023-01-12T09:00:00.000Z',
+    EndTime: '2023-01-12T10:30:00.000Z',
     CategoryColor: '#00bdae',
   },
   {
     Id: 23,
     Subject: 'Người Quan Sát Bầu Trời',
     Location: 'Greenland',
-    StartTime: '2021-01-15T09:00:00.000Z',
-    EndTime: '2021-01-15T10:30:00.000Z',
+    StartTime: '2023-01-15T09:00:00.000Z',
+    EndTime: '2023-01-15T10:30:00.000Z',
     CategoryColor: '#ea7a57',
   },
   {
     Id: 24,
     Subject: 'Sự Thật về Chim Họa Mi',
     Location: 'Bang California',
-    StartTime: '2021-01-16T07:00:00.000Z',
-    EndTime: '2021-01-16T09:00:00.000Z',
+    StartTime: '2023-01-16T07:00:00.000Z',
+    EndTime: '2023-01-16T09:00:00.000Z',
     CategoryColor: '#7fa900',
   },
 ];
@@ -3134,14 +3138,14 @@ export const lineChartData = [
 export const dropdownData = [
   {
     Id: '1',
-    Time: 'March 2021',
+    Time: 'Tháng 3 năm 2023',
   },
   {
     Id: '2',
-    Time: 'April 2021',
+    Time: 'Tháng 4 năm 2023',
   }, {
     Id: '3',
-    Time: 'May 2021',
+    Time: 'Tháng 5 năm 2023',
   },
 ];
 export const SparklineAreaData = [
@@ -3168,7 +3172,7 @@ export const lineCustomSeries = [
     dataSource: lineChartData[1],
     xName: 'x',
     yName: 'y',
-    name: 'England',
+    name: 'Anh',
     width: '2',
     marker: { visible: true, width: 10, height: 10 },
     type: 'Line'
@@ -3187,13 +3191,13 @@ export const lineCustomSeries = [
 ];
 
 export const pieChartData = [
-  { x: 'Labour', y: 18, text: '18%' },
-  { x: 'Legal', y: 8, text: '8%' },
-  { x: 'Production', y: 15, text: '15%' },
-  { x: 'License', y: 11, text: '11%' },
-  { x: 'Facilities', y: 18, text: '18%' },
-  { x: 'Taxes', y: 14, text: '14%' },
-  { x: 'Insurance', y: 16, text: '16%' },
+  { x: 'Lao động', y: 18, text: '18%' },
+  { x: 'Pháp lý', y: 8, text: '8%' },
+  { x: 'Sản xuất', y: 15, text: '15%' },
+  { x: 'Giấy phép', y: 11, text: '11%' },
+  { x: 'Cơ sở vật chất', y: 18, text: '18%' },
+  { x: 'Thuế', y: 14, text: '14%' },
+  { x: 'Bảo hiểm', y: 16, text: '16%' },
 ];
 
 export const contextMenuItems = [
@@ -3219,7 +3223,7 @@ export const ecomPieChartData = [
   { x: '2018', y: 18, text: '35%' },
   { x: '2019', y: 18, text: '15%' },
   { x: '2020', y: 18, text: '25%' },
-  { x: '2021', y: 18, text: '25%' },
+  { x: '2023', y: 18, text: '25%' },
 ];
 
 export const stackedChartData = [
@@ -5934,10 +5938,10 @@ export const financialChartData = [
   },
 ];
 export const PyramidData = [
-  { x: 'Sweet Treats', y: 120, text: '120 cal' },
-  { x: 'Milk, Youghnut, Cheese', y: 435, text: '435 cal' },
-  { x: 'Vegetables', y: 470, text: '470 cal' },
-  { x: 'Meat, Poultry, Fish', y: 475, text: '475 cal' },
-  { x: 'Fruits', y: 520, text: '520 cal' },
-  { x: 'Bread, Rice, Pasta', y: 930, text: '930 cal' },
+  { x: 'Đồ ngọt', y: 120, text: '120 cal' },
+  { x: 'Sữa, Bánh ngọt, Phô mai', y: 435, text: '435 cal' },
+  { x: 'Rau củ', y: 470, text: '470 cal' },
+  { x: 'Thịt, Gà, Cá', y: 475, text: '475 cal' },
+  { x: 'Trái cây', y: 520, text: '520 cal' },
+  { x: 'Bánh mì, Cơm, Mì ống', y: 930, text: '930 cal' },
 ];

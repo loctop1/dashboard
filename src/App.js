@@ -115,9 +115,10 @@ const App = () => {
                                     <Route path='/Dữ Liệu Tài Chính' element={<Financial />} />
                                     <Route path='/Biểu Đồ Màu' element={<ColorMapping />} />
                                     <Route path='/Kim Tự Tháp' element={<Pyramid />} />
-                                    <Route path='/stacked' element={<Stacked />} />
+                                    <Route path='/Doanh Thu' element={<Stacked />} />
                                 </Routes>
                             </div>
+                            <Footer />
                         </div>
                     </div>
                 </BrowserRouter >
